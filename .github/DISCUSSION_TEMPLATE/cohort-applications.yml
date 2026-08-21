@@ -1,37 +1,37 @@
 title: "[Pitch]: "
-labels: ["needs upvoting"]
+labels: ["needs upvotes"]
 body:
   - type: markdown
     attributes:
       value: |
         ## 🚀 Welcome to Trailblazer Labs!
-        Submit your project pitch to apply for the next **180-day Builder in Residence** cohort[cite: 1]. The community will vote on their favorite ideas, and top submissions will be evaluated for acceptance[cite: 1].
+        Submit your project pitch to apply for the next **180-day Builder in Residence** cohort. The community will vote on their favorite ideas, and top submissions will be evaluated for acceptance.
         
         ---
 
   - type: textarea
     id: pitch
     attributes:
-      label: 💡 Elevator Pitch
-      description: What are you building? Give us a compelling 2–3 sentence summary of your asset.
-      placeholder: e.g., A lightweight LWC component that connects Flow directly to Agentforce...
+      label: "💡 Elevator Pitch"
+      description: "What are you building? Give us a compelling 2–3 sentence summary of your asset."
+      placeholder: "e.g., A lightweight LWC component that connects Flow directly to Agentforce..."
     validations:
       required: true
 
   - type: textarea
     id: problem
     attributes:
-      label: 🎯 Problem Statement
-      description: What specific process gap, architectural roadblock, or pain point does this solve?
-      placeholder: Describe the manual steps or technical limitations users face today...
+      label: "🎯 Problem Statement"
+      description: "What specific process gap, architectural roadblock, or pain point does this solve?"
+      placeholder: "Describe the manual steps or technical limitations users face today..."
     validations:
       required: true
 
   - type: dropdown
     id: track
     attributes:
-      label: 🛠️ Development Track
-      description: Select the primary track that best describes your technical approach[cite: 1].
+      label: "🛠️ Development Track"
+      description: "Select the primary track that best describes your technical approach."
       options:
         - "The Strategist (No-Code: Prompt Libraries, Governance Models, Frameworks)"
         - "The Declarative Developer (Low-Code: Flow Templates, Agent Configs, App Builder)"
@@ -42,8 +42,8 @@ body:
   - type: textarea
     id: builder-bio
     attributes:
-      label: 👤 Builder Profile
-      description: Tell us briefly about yourself and your background in the Salesforce ecosystem.
+      label: "👤 Builder Profile"
+      description: "Tell us briefly about yourself and your background in the Salesforce ecosystem."
     validations:
       required: true
 
@@ -52,12 +52,12 @@ body:
       value: |
         ---
         ### 📋 Residency Terms & Guidelines
-        Please review and confirm the core guidelines of the Builder in Residence program[cite: 1].
+        Please review and confirm the core guidelines of the Builder in Residence program.
 
   - type: checkboxes
     id: rules-acknowledgment
     attributes:
-      label: Required Acknowledgments
+      label: "Required Acknowledgments"
       options:
         - label: "Selection Process: I understand pitches are selected based on community upvotes and an internal rubric evaluating feasibility, security, and quality."
           required: true
