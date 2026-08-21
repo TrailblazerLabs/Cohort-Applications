@@ -1,53 +1,69 @@
 title: "[Pitch]: "
-labels: ["needs upvotes"]
+labels: ["needs upvoting"]
 body:
   - type: markdown
     attributes:
       value: |
-        ### Welcome to the Co-Creation Frontier! 🐻☁️
-        Please fill out the details below. The community will upvote their favorites, and the top pitches will be evaluated for our next 180-day Builder in Residence cohort.
+        ## 🚀 Welcome to Trailblazer Labs!
+        Submit your project pitch to apply for the next **180-day Builder in Residence** cohort[cite: 1]. The community will vote on their favorite ideas, and top submissions will be evaluated for acceptance[cite: 1].
+        
+        ---
+
   - type: textarea
     id: pitch
     attributes:
-      label: What are you building?
-      description: Provide a 2-3 sentence elevator pitch for your asset.
+      label: 💡 Elevator Pitch
+      description: What are you building? Give us a compelling 2–3 sentence summary of your asset.
+      placeholder: e.g., A lightweight LWC component that connects Flow directly to Agentforce...
     validations:
       required: true
+
   - type: textarea
     id: problem
     attributes:
-      label: What problem does it solve?
-      description: Explain the manual process, architectural gap, or pain point this addresses.
+      label: 🎯 Problem Statement
+      description: What specific process gap, architectural roadblock, or pain point does this solve?
+      placeholder: Describe the manual steps or technical limitations users face today...
     validations:
       required: true
+
   - type: dropdown
     id: track
     attributes:
-      label: Which track does this belong to?
+      label: 🛠️ Development Track
+      description: Select the primary track that best describes your technical approach[cite: 1].
       options:
-        - The Strategist (No-Code)
-        - The Declarative Developer (Low-Code)
-        - The Engineer (Pro-Code)
+        - "The Strategist (No-Code: Prompt Libraries, Governance Models, Frameworks)"
+        - "The Declarative Developer (Low-Code: Flow Templates, Agent Configs, App Builder)"
+        - "The Engineer (Pro-Code: LWC, Apex, External API Integrations, CLI Plugins)"
     validations:
       required: true
+
   - type: textarea
     id: builder-bio
     attributes:
-      label: Who are you?
-      description: Briefly introduce yourself and your experience in the Salesforce ecosystem.
+      label: 👤 Builder Profile
+      description: Tell us briefly about yourself and your background in the Salesforce ecosystem.
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### 📋 Residency Terms & Guidelines
+        Please review and confirm the core guidelines of the Builder in Residence program[cite: 1].
+
   - type: checkboxes
     id: rules-acknowledgment
     attributes:
-      label: ⚠️ Cohort Rules & Criteria
-      description: By submitting this pitch, you acknowledge the Trailblazer Labs Builder in Residence guidelines.
+      label: Required Acknowledgments
       options:
-        - label: "**The Selection Process:** I understand pitches are selected based on community upvotes and an internal grading rubric focusing on feasibility, security, and quality."
+        - label: "Selection Process: I understand pitches are selected based on community upvotes and an internal rubric evaluating feasibility, security, and quality."
           required: true
-        - label: "**The Deadline:** If selected, I agree to have my asset fully built, documented, and past technical gates *before* the cohort officially launches."
+        - label: "Production Deadline: If accepted, I agree to complete, document, and pass technical reviews on my asset before the official cohort launch."
           required: true
-        - label: "**Open Source:** I am the original creator and agree to publish the asset under the Apache 2.0 license, and understand it will not be distributed as a managed or unmanaged package."
+        - label: "Open Source Licensing: I am the original creator and agree to release this asset under the Apache 2.0 license."
           required: true
-        - label: "**The 180-Day Residency:** I agree to act as the lead maintainer and evangelist for 6 months (triage bugs, review PRs) before handing it off to community maintainers or deprecating it."
+        - label: "180-Day Commitment: I agree to serve as lead maintainer for 6 months (triage issues and review PRs) before community handoff or deprecation."
           required: true
