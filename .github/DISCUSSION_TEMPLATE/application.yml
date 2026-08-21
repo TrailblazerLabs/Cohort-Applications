@@ -2,6 +2,7 @@ name: Cohort Application
 description: Pitch your asset to the community and apply for the next Builder in Residence cohort.
 title: "[Pitch]: "
 labels: ["needs upvotes"]
+category: "Cohort Applications"
 body:
   - type: markdown
     attributes:
