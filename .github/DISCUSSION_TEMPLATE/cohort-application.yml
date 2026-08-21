@@ -1,8 +1,5 @@
-name: Cohort Application
-description: Pitch your asset to the community and apply for the next Builder in Residence cohort.
 title: "[Pitch]: "
 labels: ["needs upvotes"]
-category: "Cohort Applications"
 body:
   - type: markdown
     attributes:
@@ -46,8 +43,6 @@ body:
       label: ⚠️ Cohort Rules & Criteria
       description: By submitting this pitch, you acknowledge the Trailblazer Labs Builder in Residence guidelines.
       options:
-
-     
         - label: "**The Selection Process:** I understand pitches are selected based on community upvotes and an internal grading rubric focusing on feasibility, security, and quality."
           required: true
         - label: "**The Deadline:** If selected, I agree to have my asset fully built, documented, and past technical gates *before* the cohort officially launches."
