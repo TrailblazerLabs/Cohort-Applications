@@ -46,11 +46,11 @@ body:
       label: ⚠️ Cohort Rules & Criteria
       description: By submitting this pitch, you acknowledge the Trailblazer Labs Builder in Residence guidelines.
       options:
-        - label: **The Selection Process:** I understand pitches are selected based on community upvotes and an internal grading rubric focusing on feasibility, security, and quality[cite: 1].
+        - label: **The Selection Process:** I understand pitches are selected based on community upvotes and an internal grading rubric focusing on feasibility, security, and quality.
           required: true
-        - label: **The Deadline:** If selected, I agree to have my asset fully built, documented, and past technical gates *before* the cohort officially launches[cite: 1].
+        - label: **The Deadline:** If selected, I agree to have my asset fully built, documented, and past technical gates *before* the cohort officially launches.
           required: true
-        - label: **Open Source:** I am the original creator and agree to publish the asset under the Apache 2.0 license, and understand it will not be distributed as a managed or unmanaged package[cite: 1].
+        - label: **Open Source:** I am the original creator and agree to publish the asset under the Apache 2.0 license, and understand it will not be distributed as a managed or unmanaged package.
           required: true
-        - label: **The 180-Day Residency:** I agree to act as the lead maintainer and evangelist for 6 months (triage bugs, review PRs) before handing it off to community maintainers or deprecating it[cite: 1].
+        - label: **The 180-Day Residency:** I agree to act as the lead maintainer and evangelist for 6 months (triage bugs, review PRs) before handing it off to community maintainers or deprecating it.
           required: true
