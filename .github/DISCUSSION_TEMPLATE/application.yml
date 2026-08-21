@@ -1,0 +1,55 @@
+name: Cohort Application
+description: Pitch your asset to the community and apply for the next Builder in Residence cohort.
+title: "[Pitch]: "
+labels: ["needs upvotes"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### Welcome to the Co-Creation Frontier! 🐻☁️
+        Please fill out the details below. The community will upvote their favorites, and the top pitches will be evaluated for our next 180-day Builder in Residence cohort.
+  - type: textarea
+    id: pitch
+    attributes:
+      label: What are you building?
+      description: Provide a 2-3 sentence elevator pitch for your asset.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem does it solve?
+      description: Explain the manual process, architectural gap, or pain point this addresses.
+    validations:
+      required: true
+  - type: dropdown
+    id: track
+    attributes:
+      label: Which track does this belong to?
+      options:
+        - The Strategist (No-Code)
+        - The Declarative Developer (Low-Code)
+        - The Engineer (Pro-Code)
+    validations:
+      required: true
+  - type: textarea
+    id: builder-bio
+    attributes:
+      label: Who are you?
+      description: Briefly introduce yourself and your experience in the Salesforce ecosystem.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rules-acknowledgment
+    attributes:
+      label: ⚠️ Cohort Rules & Criteria
+      description: By submitting this pitch, you acknowledge the Trailblazer Labs Builder in Residence guidelines.
+      options:
+        - label: **The Selection Process:** I understand pitches are selected based on community upvotes and an internal grading rubric focusing on feasibility, security, and quality[cite: 1].
+          required: true
+        - label: **The Deadline:** If selected, I agree to have my asset fully built, documented, and past technical gates *before* the cohort officially launches[cite: 1].
+          required: true
+        - label: **Open Source:** I am the original creator and agree to publish the asset under the Apache 2.0 license, and understand it will not be distributed as a managed or unmanaged package[cite: 1].
+          required: true
+        - label: **The 180-Day Residency:** I agree to act as the lead maintainer and evangelist for 6 months (triage bugs, review PRs) before handing it off to community maintainers or deprecating it[cite: 1].
+          required: true
