@@ -1,1 +1,43 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# RELAY WORKFLOW — paste this into BOTH discussion repos, NOT the site repo:
+#
+#   TrailblazerLabs/community-hub        -> .github/workflows/notify-site.yml
+#   TrailblazerLabs/Cohort-Applications  -> .github/workflows/notify-site.yml
+#
+# It listens for discussion + comment changes and pokes the site repo's
+# "Build builders.json" Action (via repository_dispatch) so data/discussions.json
+# and data/pitches.json regenerate automatically — near-real-time, no manual run.
+#
+# PREREQUISITES (do these first, or the dispatch 403s):
+#   1. The BUILDERS_TOKEN fine-grained PAT must include the site repo
+#      (TrailblazerLabs/TrailblazerLabs-site) in its selected repositories,
+#      with Contents: write (needed to POST /dispatches).
+#   2. Add BUILDERS_TOKEN as an Actions secret in THIS repo
+#      (Settings -> Secrets and variables -> Actions -> New repository secret),
+#      same PAT value as the site repo.
+#
+# This file is a local reference copy kept in the site repo's relay-workflows/
+# folder; it does nothing here. Create it in the two discussion repos via
+# Add file -> Create new file, path .github/workflows/notify-site.yml.
+# ─────────────────────────────────────────────────────────────────────────────
+name: Notify site to rebuild
 
+on:
+  discussion:
+    types: [created, edited, deleted, category_changed, answered, unanswered]
+  discussion_comment:
+    types: [created, edited, deleted]
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fire repository_dispatch to the site repo
+        env:
+          TOKEN: ${{ secrets.BUILDERS_TOKEN }}
+        run: |
+          curl -sSf -X POST \
+            -H "Authorization: Bearer $TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            https://api.github.com/repos/TrailblazerLabs/TrailblazerLabs-site/dispatches \
+            -d '{"event_type":"discussion-changed","client_payload":{"repo":"${{ github.repository }}"}}'
