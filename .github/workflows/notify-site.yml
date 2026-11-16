@@ -24,7 +24,9 @@ name: Notify site to rebuild
 
 on:
   discussion:
-    types: [created, edited, deleted, category_changed, answered, unanswered]
+    # labeled/unlabeled: adding or removing the "approved" label publishes or
+    # unpublishes a pitch on the site, so rebuild immediately.
+    types: [created, edited, deleted, category_changed, answered, unanswered, labeled, unlabeled]
   discussion_comment:
     types: [created, edited, deleted]
 
